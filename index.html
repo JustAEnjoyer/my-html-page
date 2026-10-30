@@ -437,7 +437,7 @@ function checkNameInputError() {
   const text = inputname.value;
 
   const match = text.match(nameAndSurnamePattern)
-  const teamPattern = /^\d+$/;
+  const teamPattern = /^\d+$/.test(text);
 
   if (!match && !teamPattern){
     inputerror.textContent = "Атынызды и фамилиянызды енгізініз немесе топ нөмірінізді";
