@@ -476,19 +476,18 @@ form.addEventListener('submit', e => {
     iserror = true;
   }
   if (stancions.filter(x => x.checked).length === 0){
-    e.preventDefault();
     stanceerror.textContent = 'Кемінде біреуін таңдаңыз.';
     stanceerror.classList.add('error');
     stanceerror.style.display = "block";
     iserror = true;
   }
   if (checks.filter(x => x.checked).length === 0) {
-    e.preventDefault();
     count.textContent = 'Кемінде бір бағытты таңдаңыз.';
     count.classList.add('error');
     iserror = true;
   }
   if (iserror){
+    e.preventDefault();
     footnote.textContent = "Сауалнама қате толтырылған.";
     footnote.classList.add('error')
     footnote.style.display = "block";
