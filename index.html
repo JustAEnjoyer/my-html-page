@@ -346,7 +346,7 @@ textarea.text-input{min-height:100px;resize:vertical}
       </div>
 
       <fieldset class="question">
-        <legend>Аты жөніңіз немесе топ нөміріңіз: <span class="required">*</span></legend>
+        <legend>Аты-жөніңіз немесе топ нөмірі: <span class="required">*</span></legend>
         <input class="text-input" id="input-name" name="entry.328796162" placeholder="Атыңызды немесе топ нөмірін жазыңыз" required>
         <div class="counter" style="display: none;" id="input-error" aria-live="polite"></div>
       </fieldset>
@@ -367,7 +367,7 @@ textarea.text-input{min-height:100px;resize:vertical}
       </fieldset>
 
       <fieldset class="question">
-        <legend>Маған қызық екі бағыт <span class="required">*</span></legend>
+        <legend>Өзіңізге қызықты екі бағытты таңдаңыз. <span class="required">*</span></legend>
         <p class="hint">Екі бағытқа дейін таңдаңыз.</p>
         <div class="options" id="directions">
           <label class="option"><input type="checkbox" name="entry.2118636200" value="БҚЕ"><span>БҚЕ</span></label>
@@ -440,7 +440,7 @@ function checkNameInputError() {
   const teamPattern = /^\d+$/.test(text);
 
   if (!match && !teamPattern){
-    inputerror.textContent = "Атынызды и фамилиянызды енгізініз немесе топ нөмірінізді";
+    inputerror.textContent = "Аты-жөніңізді немесе топ нөміріңізді енгізіңіз.";
     inputerror.style.color="red";
     inputerror.style.display = "block";
     return true;
@@ -489,7 +489,7 @@ form.addEventListener('submit', e => {
     iserror = true;
   }
   if (iserror){
-    footnote.textContent = "Жіберу сауалнаманызды қате толтырдыныз";
+    footnote.textContent = "Сауалнама қате толтырылған.";
     footnote.classList.add('error')
     footnote.style.display = "block";
     return;}
